@@ -17,7 +17,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 
-//채팅방 - commit
+//채팅방 - commit2
 @Entity
 @Table(name = "chat_room")
 public class chatRoom {
