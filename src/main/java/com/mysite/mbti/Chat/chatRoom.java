@@ -17,7 +17,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 
-//채팅방 - 커밋 마지막 테스트
+//채팅방 - 커밋 테스트 4
 @Entity
 @Table(name = "chat_room")
 public class chatRoom {
