@@ -1,9 +1,7 @@
-package com.mysite.mbti.Chat;
+package com.mysite.mbti.entity;
 
 import java.time.LocalDateTime;
 import java.util.List;
-
-import com.mysite.mbti.User.userInfo;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -20,7 +18,7 @@ import jakarta.persistence.Table;
 //채팅방 - 커밋 테스트 4
 @Entity
 @Table(name = "chat_room")
-public class chatRoom {
+public class ChatRoomEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,7 +27,7 @@ public class chatRoom {
     
     @ManyToOne
     @JoinColumn(name = "userId", nullable = false)
-    private userInfo userId;
+    private UserInfoEntity userId;
 
     //채팅방 이름
     @Column(nullable = false)
@@ -54,7 +52,7 @@ public class chatRoom {
 
     //ChatRoom을 삭제시 해당 방에 대한 채팅기록도 함께 삭제된다.
     @OneToMany(mappedBy = "chatRoom", cascade = CascadeType.ALL)
-    private List<chatRecord> chatRecords;
+    private List<ChatRecordEntity> chatRecords;
     
 }
 

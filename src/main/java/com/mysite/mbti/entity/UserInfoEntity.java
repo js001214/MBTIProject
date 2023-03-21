@@ -1,6 +1,8 @@
-package com.mysite.mbti.User;
+package com.mysite.mbti.entity;
 
 import java.time.LocalDate;
+
+import javax.management.relation.Role;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -14,7 +16,7 @@ import jakarta.persistence.Table;
 //회원정보
 @Entity
 @Table(name = "user_info")
-public class userInfo {
+public class UserInfoEntity {
 	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

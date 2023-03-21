@@ -1,6 +1,4 @@
-package com.mysite.mbti.Chat;
-
-import com.mysite.mbti.User.userInfo;
+package com.mysite.mbti.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -14,7 +12,7 @@ import jakarta.persistence.Table;
 //채팅기록
 @Entity
 @Table(name = "chat_record")
-public class chatRecord {
+public class ChatRecordEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +20,7 @@ public class chatRecord {
 
     @ManyToOne
     @JoinColumn(name = "userId", nullable = false)
-    private userInfo user;
+    private UserInfoEntity user;
 
     //채팅내용
     @Column(nullable = false)
